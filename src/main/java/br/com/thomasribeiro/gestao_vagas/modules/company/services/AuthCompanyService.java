@@ -49,6 +49,7 @@ public class AuthCompanyService {
         Algorithm algorithm = Algorithm.HMAC256(secretKey);
 
         var expiresIn = Instant.now().plus(Duration.ofHours(2));
+
         var token = JWT.create()
                 .withIssuer("javagas")
                 .withExpiresAt(expiresIn)
