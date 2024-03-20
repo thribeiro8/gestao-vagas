@@ -43,6 +43,7 @@ public class CreateJobControllerTest {
                                 .build();
         }
 
+        @SuppressWarnings("null")
         @Test
         public void shouldBeAbleToCreateANewJob() throws Exception {
 
@@ -62,7 +63,6 @@ public class CreateJobControllerTest {
                                 .level("LEVEL_TEST")
                                 .build();
 
-                @SuppressWarnings("null")
                 var result = mvc.perform(
                                 MockMvcRequestBuilders.post("/company/job/")
                                                 .contentType(MediaType.APPLICATION_JSON)
